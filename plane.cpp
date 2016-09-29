@@ -7,7 +7,7 @@ Coord::Coord (){
 
 Coord::Coord(int x_axis, int y_axis){
     x = x_axis;
-    x = y_axis;
+    y = y_axis;
 }
 
 int Coord::get_x(){
