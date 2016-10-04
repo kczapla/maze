@@ -1,4 +1,4 @@
-#include "plane.hpp"
+#include "../include/coord.hpp"
 
 Coord::Coord (){
     x = 0;

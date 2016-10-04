@@ -1,6 +1,6 @@
 #include <iostream>
-#include "plane.hpp"
-#include "field.hpp"
+#include "../include/coord.hpp"
+#include "../include/field.hpp"
 
 int main () {
     Coord x (1, 1);
