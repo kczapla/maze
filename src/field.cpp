@@ -15,6 +15,9 @@ Coord Field::get_position() {
     return coord;
 }
 
+std::string Field::get_symbol() {
+    return symbol;
+}
 
 void Field::set_position(Coord coord) {
     coord = coord;
