@@ -47,3 +47,17 @@ FieldFactory::convert_file_to_map(std::string path) {
     }
     return map;
 }
+
+
+void
+FieldFactory::convert_map_to_file(std::vector<std::vector<Field> > map, 
+                                  std::string path) {
+    std::ofstream file;
+    file.open(path);
+    for (auto row: map) {
+        for (auto c: row) {
+            file << c.get_symbol();
+        }
+    }
+    file.close();
+}

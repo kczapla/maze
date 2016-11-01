@@ -16,6 +16,7 @@ int main () {
     std::vector<std::vector<Field> > board; 
     std::string s = "res/simple_map.txt";
     board = ff.convert_file_to_map(s);
+    ff.convert_map_to_file(board, "res/exmp.txt");
     for (auto i: board) {
         for (auto j: i) {
             std::cout << j.get_symbol();
