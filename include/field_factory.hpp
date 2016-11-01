@@ -1,16 +1,17 @@
-#ifndef __FIELD_FACTORY.HPP_H_INCLUDED__
-#define __FIELD_FACTORY.HPP_H_INCLUDED__
+#ifndef __FIELD_FACTORY_H_INCLUDED__
+#define __FIELD_FACTORY_H_INCLUDED__
  
 #include <string>
-#include "field"
+#include <vector>
+#include "field.hpp"
  
 class FieldFactory {
-    std::string path; 
-
     Field convert_symbol_to_field(std::string sym);
     std::string convert_field_to_symbol(Field f);
+
     public: 
-        FieldFactory(std::string path); 
+    std::vector<std::vector<Field> > convert_file_to_map(std::string path);
+    void convert_map_to_file(std::vector<std::vector<Field> > map, std::string path);
 }; 
  
 #endif

@@ -1,1 +1,4 @@
 *.out
+*.gch
+bin/*
+build/*

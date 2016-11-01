@@ -1,5 +1,5 @@
-#ifndef __INCLUDE/GAME.HPP_H_INCLUDED__
-#define __INCLUDE/GAME.HPP_H_INCLUDED__
+#ifndef __INCLUDE/GAME_H_INCLUDED__
+#define __INCLUDE/GAME_H_INCLUDED__
 #include <vector>
 #include "field.hpp"
 

@@ -1,6 +1,5 @@
-#ifndef __PLANE_H_INCLUDED__
-
-#define __PLANE_H_INCLUDED__
+#ifndef __COORD_H_INCLUDED__
+#define __COORD_H_INCLUDED__
 
 class Coord{
     int x, y;
@@ -14,4 +13,4 @@ class Coord{
         void set_y(int);
 };
 
-#endif /* __PLANE_H_INCLUDED__  */
+#endif /* __COORD_H_INCLUDED__  */
