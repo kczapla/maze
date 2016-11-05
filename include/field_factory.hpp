@@ -6,7 +6,7 @@
 #include "field.hpp"
  
 class FieldFactory {
-    Field convert_symbol_to_field(std::string sym);
+    Field convert_symbol_to_field(std::string sym, Point crd);
     std::string convert_field_to_symbol(Field f);
 
     public: 

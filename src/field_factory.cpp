@@ -7,24 +7,26 @@
 #include "../include/wall.hpp"
 
 
-Field FieldFactory::convert_symbol_to_field(std::string sym) {
+Field FieldFactory::convert_symbol_to_field(std::string sym, Point crd) {
     Field f; 
     if (sym == "F") {
-        f = Field(sym);
+        f = Field(crd, sym);
     }
     else if (sym == "W") {
-        f = Field(sym);
+        f = Field(crd, sym);
     }
     else if (sym == " ") {
-        f = Field(sym);
+        f = Field(crd, sym);
     }
     return f;
 }
+
 
 std::string FieldFactory::convert_field_to_symbol(Field f) {
     std::string sym = f.get_symbol();
     return sym;
 }
+
 
 std::vector<std::vector<Field> > 
 FieldFactory::convert_file_to_map(std::string path) {
@@ -32,11 +34,14 @@ FieldFactory::convert_file_to_map(std::string path) {
     std::string line;
     std::vector<std::vector<Field> > map;
     if (file.is_open()) {
+        int row_cnt = 0;   // Count the number of lines
         while (std::getline(file, line)) {
             std::vector<Field> row;
+            int col_cnt = 0;  // Column counter
             for (auto c: line) {
                 std::string tmpc(1, c); 
-                Field tmp = this->convert_symbol_to_field(tmpc);
+                Point p {row_cnt, col_cnt};
+                Field tmp = this->convert_symbol_to_field(tmpc, p);
                 row.push_back(tmp);
             }
             map.push_back(row);

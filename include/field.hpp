@@ -2,21 +2,20 @@
 #define __FIELD_H_INCLUDED__
 
 #include <string>
-#include "coord.hpp"
+#include "point.hpp"
 
 
 class Field {
-    Coord coord;
+    Point coord;
     std::string symbol;
     public:
        // Constructors 
-       Field ();
-       Field (std::string);
-       Field (Coord, std::string);
+       Field (): coord {Point {0, 0}}, symbol {"F"} {}
+       Field (Point c, std::string s) : coord{c}, symbol{s} {}
 
-       Coord get_position();
+       Point get_position();
        std::string get_symbol();
-       void set_position(Coord);
+       void set_position(Point);
        
 };
 #endif /* __FIELD_H_INCLUDED__  */

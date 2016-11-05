@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../include/coord.hpp"
+#include "../include/point.hpp"
 #include "../include/field.hpp"
 #include "../include/field_factory.hpp"
 
 int main () {
-    Coord x (1, 1);
+    Point x (1, 1);
     std::cout << x.get_x() << std::endl;
     Field f (x, "F");
-    Coord y = f.get_position();
+    Point y = f.get_position();
     std::cout << y.get_x() << y.get_y() << std::endl;
-    Coord za = f.get_position();
+    Point za = f.get_position();
     FieldFactory ff;
     std::vector<std::vector<Field> > board; 
     std::string s = "res/simple_map.txt";
