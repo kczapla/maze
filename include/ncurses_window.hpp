@@ -7,9 +7,11 @@
 class NcursesWindow: public CursorWindow { 
     private:
         WINDOW *local_win;
-        void init_window();
     public:
-        NcursesWindow(Point se, Point st) : CursorWindow(se, st) {}
+        NcursesWindow(Point start, Point size) : CursorWindow(start, size) {}
+        void init_window();
+        void print_symbol(std::string symbol, Point crd);
+        void delete_window();
 }; 
  
 #endif

@@ -11,10 +11,10 @@ class CursorWindow {
         Point start;  // Start point of the window
         
         // Methods
-        virtual void init_window() = 0;
 
     public: 
-        CursorWindow(Point se, Point st) : size {se}, start {st} {} 
+        CursorWindow(Point start, Point size) : start {start}, size {size} {} 
+        virtual void init_window() = 0;
         virtual void print_symbol(std::string symbol, Point crd) = 0; // Points relative to the window
 }; 
  
