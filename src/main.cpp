@@ -32,7 +32,9 @@ int main () {
     Point size {3, 10};
     NcursesWindow w {start, size};
     w.init_window();
-    while (getch() != KEY_ENTER) {
+    std::string s = "A";
+    w.print_symbol(s, Point {1,1});
+    while (getch()) {
     };
     endwin();
     return 0;

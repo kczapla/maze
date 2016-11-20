@@ -1,6 +1,14 @@
 #include "../include/ncurses_window.hpp"
 
 
+void NcursesWindow::change_window_position(Point new_position) {
+}
+
+
+void NcursesWindow::change_window_size(Point new_size) {
+}
+
+
 void NcursesWindow::delete_window() {
     delwin(local_win);
     refresh();
@@ -19,6 +27,7 @@ void NcursesWindow::init_window() {
 
 
 void NcursesWindow::print_symbol(std::string symbol, Point crd) {
-    char *a = "a";
-    // mvwaddch(local_win, crd.get_y(), crd.get_x(), a);
+    const char *a = symbol.c_str();
+    mvwprintw(local_win, crd.get_y(), crd.get_x(), a);
+    wrefresh(local_win);
 }
