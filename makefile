@@ -1,15 +1,15 @@
-CC=clang++
-RM= rm
+CC = clang
+RM = rm
 SRCDIR = src
 BUILDDIR = build
-TARGET=bin/maze
+TARGET = bin/maze
 
-SRCEXT = cpp
+SRCEXT = c
 SOURCES = $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS = $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-CFLAGS = -g -std=c++11
+CFLAGS = -g
 LDFLAGS = -lncurses
-INC = -I inlucde
+INC = -I include
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking... "
