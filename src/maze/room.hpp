@@ -7,10 +7,10 @@ namespace maze
 {
     class Room : public MapSite
     {
-        Room(int roomNo);
+        Room(int);
 
         std::shared_ptr<MapSite> get_side(Direction) const;
-        void set_side(std::shared_ptr<MapSite> side);
+        void set_side(std::shared_ptr<MapSite>, Direction);
 
         virtual void enter();
 
