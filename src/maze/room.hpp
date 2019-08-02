@@ -5,8 +5,11 @@
 
 namespace maze
 {
+    class Pawn;
+
     class Room : public MapSite
     {
+    public:
         Room(int);
 
         std::shared_ptr<MapSite> get_side(Direction) const;
