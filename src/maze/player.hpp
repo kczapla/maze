@@ -1,3 +1,4 @@
+#pragma once
 #include "pawn.hpp"
 
 namespace maze
