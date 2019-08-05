@@ -8,7 +8,7 @@ namespace maze
         _room2 = to;
     }
 
-    void enter(std::shared_ptr<Pawn>)
+    void Door::enter(std::shared_ptr<Pawn> pawn)
     {
 
     }

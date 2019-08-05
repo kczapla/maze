@@ -16,6 +16,8 @@ namespace maze
 
         virtual void enter(std::shared_ptr<Pawn>);
 
+        int get_id() const { return _room_number; }
+
     private:
         std::unordered_map<Direction, std::shared_ptr<MapSite>> _sides;
         int _room_number;
