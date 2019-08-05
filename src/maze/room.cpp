@@ -22,6 +22,5 @@ namespace maze
     
     void Room::enter(std::shared_ptr<Pawn> pawn)
     {
-        _pawn = pawn;
     }
 }

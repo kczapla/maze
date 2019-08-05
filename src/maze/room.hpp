@@ -19,6 +19,5 @@ namespace maze
     private:
         std::unordered_map<Direction, std::shared_ptr<MapSite>> _sides;
         int _room_number;
-        std::shared_ptr<Pawn> _pawn;
     };
 }
