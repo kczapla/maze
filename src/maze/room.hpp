@@ -5,8 +5,6 @@
 
 namespace maze
 {
-    class Pawn;
-
     class Room : public MapSite
     {
     public:
@@ -15,11 +13,12 @@ namespace maze
         std::shared_ptr<MapSite> get_side(Direction) const;
         void set_side(std::shared_ptr<MapSite>, Direction);
 
-        virtual void enter();
+        virtual void enter(std::shared_ptr<Pawn>);
 
     private:
         std::unordered_map<Direction, std::shared_ptr<MapSite>> _sides;
         int _room_number;
+        std::shared_ptr<Pawn> _pawn;
     };
 
     class Wall : public MapSite
