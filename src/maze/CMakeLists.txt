@@ -6,8 +6,8 @@ add_executable(maze
     "${CMAKE_CURRENT_SOURCE_DIR}/player.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/wall.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/door.cpp"
-    # "${CMAKE_CURRENT_SOURCE_DIR}/maze_builder.cpp"
-    # "${CMAKE_CURRENT_SOURCE_DIR}/standard_maze_builder.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/maze_builder.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/standard_maze_builder.cpp"
 )
 
 target_sources(maze
@@ -22,8 +22,8 @@ target_sources(maze
     "${CMAKE_CURRENT_SOURCE_DIR}/player.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/wall.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/door.hpp"
-    # "${CMAKE_CURRENT_SOURCE_DIR}/maze_builder.hpp"
-    # "${CMAKE_CURRENT_SOURCE_DIR}/standard_maze_builder.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/maze_builder.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/standard_maze_builder.hpp"
 )
 
 target_include_directories(maze PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")

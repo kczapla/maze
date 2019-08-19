@@ -1,3 +1,5 @@
+#pragma once
+
 namespace maze
 {
     struct Size2D

@@ -20,11 +20,8 @@ namespace maze
         return *room;
     }
 
-    Direction Linear2dMazeStorage::neighbouring_wall_direction(std::shared_ptr<Room> room1, std::shared_ptr<Room> room2)
+    Direction Linear2dMazeStorage::common_wall(int room1_id, int room2_id)
     {
-        auto room1_id = room1->get_id();
-        auto room2_id = room2->get_id();
-
         auto room1_pos = _rooms_grid_position[room1_id];
         auto room2_pos = _rooms_grid_position[room2_id];
 

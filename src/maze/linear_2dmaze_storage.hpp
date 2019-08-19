@@ -1,3 +1,4 @@
+#pragma once
 #include <map>
 #include "maze_storage.hpp"
 
@@ -10,7 +11,7 @@ namespace maze
 
         void add_room(std::shared_ptr<Room> room);
         std::shared_ptr<Room> room_no(int room_id) const;
-        Direction neighbouring_wall_direction(std::shared_ptr<Room> room1, std::shared_ptr<Room> room2);
+        Direction common_wall(int room1_id, int room2_id);
 
     private:
         Size2D _dimensions;
