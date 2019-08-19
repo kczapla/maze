@@ -3,6 +3,7 @@
 #include <memory>
 #include <exception>
 #include "room.hpp"
+#include "maze_dimensions.hpp"
 
 
 namespace maze
@@ -24,7 +25,7 @@ namespace maze
     class MazeStorage
     {
     public:
-        MazeStorage() = delete;
+        MazeStorage(Size2D);
         virtual void add_room(std::shared_ptr<Room> room) = 0;
         virtual std::shared_ptr<Room> room_no(int room_id) const = 0;
     };

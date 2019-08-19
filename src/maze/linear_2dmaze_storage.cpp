@@ -8,8 +8,8 @@ namespace maze
     {
         _rooms.push_back(room);
 
-        auto x = _room_counter % _width;
-        auto y = _room_counter / _height;
+        auto x = _room_counter % _dimensions.width;
+        auto y = _room_counter / _dimensions.height;
         _rooms_grid_position[room->get_id()] = std::make_pair(x, y);
         ++_room_counter;
     }
