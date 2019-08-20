@@ -11,12 +11,9 @@ namespace maze
 
         void add_room(std::shared_ptr<Room> room);
         std::shared_ptr<Room> room_no(int room_id) const;
-        Direction common_wall(int room1_id, int room2_id);
 
     private:
         Size2D _dimensions;
-        unsigned int _room_counter = 0;
-        std::map<int, std::pair<int, int>> _rooms_grid_position;
         std::vector<std::shared_ptr<Room>> _rooms;
     };
 }

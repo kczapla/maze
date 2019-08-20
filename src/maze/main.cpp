@@ -1,17 +1,11 @@
 #include <iostream>
 #include <memory>
-
-#include "room.hpp"
-#include "wall.hpp"
-#include "door.hpp"
-#include "linear_2dmaze_storage.hpp"
-#include "maze.hpp"
 #include "standard_maze_builder.hpp"
 
 
 int main(void)
 {
-    maze::StandardMazeBuilder smb({ 2, 2 });
+    maze::Maze2DBuilder smb({ 2, 2 });
     smb.build_maze();
     smb.build_room(1);
     smb.build_room(2);

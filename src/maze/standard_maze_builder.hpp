@@ -8,9 +8,9 @@
 
 namespace maze
 {
-    class StandardMazeBuilder : public MazeBuilder<Maze2D> {
+    class Maze2DBuilder : public MazeBuilder<Maze2D> {
     public:
-        StandardMazeBuilder(Size2D dimensions) : _dimensions(dimensions) {}
+        Maze2DBuilder(Size2D dimensions) : _dimensions(dimensions) {}
 
         virtual void build_maze();
         virtual void build_room(int);
@@ -19,8 +19,11 @@ namespace maze
         virtual std::shared_ptr<Maze2D> get_maze();
     
     private:
+        std::map<int, std::pair<int, int>> _rooms_grid_position;
         Size2D _dimensions;
-        int _room_id = 0;
         std::shared_ptr<Maze2D> _current_maze;
+        unsigned int _room_counter = 0;
+
+        Direction common_wall(int room1_id, int room2_id);
     };
 }
