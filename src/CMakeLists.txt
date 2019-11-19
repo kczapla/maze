@@ -1,1 +1,3 @@
-add_subdirectory(maze)
+add_executable(maze
+    "game.cpp"
+)
