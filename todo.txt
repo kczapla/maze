@@ -1,0 +1,6 @@
+move get input from renderer
+add to renderer set_render_target
+add make_window(x, y) to engine
+add make_renderer to engine
+add make_input_reader to engine
+add present to engine and remove refresh from draw in renderer
