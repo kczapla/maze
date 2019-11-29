@@ -3,11 +3,6 @@
 
 namespace maze::engine
 {
-    char NcursesRenderer::get_keyboard_input(void)
-    {
-        return getch();
-    }
-
     void NcursesRenderer::update_buffer(const std::vector<std::vector<char>>& content)
     {
         framebuffer = content;
@@ -15,6 +10,7 @@ namespace maze::engine
 
     void NcursesRenderer::draw(void)
     {
+        move(0, 0);
         for (const auto& row : framebuffer) {
             for (const auto& col : row) {
                 addch(col);
