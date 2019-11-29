@@ -1,8 +1,8 @@
 #include <vector>
-#include "ncurses_engine.hpp"
-#include "ncurses_renderer.hpp"
-#include "ncruses_window.hpp"
-#include "window_properties.hpp"
+#include "renderer/ncurses_engine.hpp"
+#include "renderer/ncurses_renderer.hpp"
+#include "renderer/ncurses_window.hpp"
+#include "renderer/window_properties.hpp"
 
 
 int main(void)

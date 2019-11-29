@@ -1,4 +1,4 @@
-#include "ncruses_window.hpp"
+#include "ncurses_window.hpp"
 
 namespace maze::engine
 {

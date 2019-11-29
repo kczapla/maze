@@ -1,8 +1,4 @@
-find_package(Curses REQUIRED)
+add_subdirectory(renderer)
 
-add_executable(maze
-    "game.cpp"
-)
-
-#target_include_directories(maze ${CURSES_INCLUDE_DIR})
-target_link_libraries(maze ${CURSES_LIBRARIES})
+add_executable(game game.cpp)
+target_link_libraries(game renderer)

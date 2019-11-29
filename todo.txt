@@ -1,4 +1,3 @@
-move get input from renderer
 add to renderer set_render_target
 add make_window(x, y) to engine
 add make_renderer to engine
