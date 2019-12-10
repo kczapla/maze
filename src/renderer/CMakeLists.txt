@@ -17,6 +17,7 @@ target_sources(renderer
     ${CMAKE_CURRENT_SOURCE_DIR}/window_size.hpp
 )
 
-target_link_libraries(renderer ${CURSES_LIBRARIES})
+# message(${CONAN_PKG::ncurses})
+target_link_libraries(renderer ${CONAN_LIBS})
 set_target_properties(renderer PROPERTIES
     CXX_STANDARD 17)
